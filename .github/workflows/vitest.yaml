@@ -1,0 +1,23 @@
+name: vitest
+
+on:
+  pull_request: 
+    types: [opened, reopened, synchronize]
+    branches:
+      - main
+      - develop
+
+jobs:
+  component-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install npm dependencies
+        run: npm ci
+      - name: run vitest
+        run: npm run test
