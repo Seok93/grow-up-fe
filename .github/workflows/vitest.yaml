@@ -1,15 +1,16 @@
-name: vitest
+name: vitest-workflow
 
 on:
-  push:
   pull_request: 
     types: [opened, reopened, synchronize]
     branches:
       - main
       - develop
+    paths:
+      - 'src/**'
 
 jobs:
-  component-test:
+  vitest-job:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
