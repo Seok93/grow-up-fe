@@ -6,4 +6,8 @@ describe('테스트 코드 확인용', () => {
   it('성공하는 테스트2', () => {
     expect('abc').toBe('abc');
   });
+
+  it('성공하는 테스트3', () => {
+    expect(true).toBe(true);
+  });
 });
