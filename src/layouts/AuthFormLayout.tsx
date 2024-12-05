@@ -9,9 +9,9 @@ export default function AuthFormLayout({ children, onSubmit }: AuthFormLayoutPro
   return (
     <>
       <section className="text-large text-main">
-        환영합니다.
+        Grow Up!
         <br />
-        우리와 함께 당신의 삶을 한층 더 성장시켜보세요!
+        follow us!
       </section>
       <form onSubmit={onSubmit} className="flex w-300 grow flex-col justify-center gap-8">
         {children}
