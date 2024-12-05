@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   aws-deploy:
@@ -26,7 +27,7 @@ jobs:
       # 빌드용 환경 변수 .env 파일 생성
       - name: Create .env file for Vite
         run: |
-          echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }} >> .env
+          echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }}" >> .env
           echo "VITE_API_URL=${{ secrets.VITE_API_URL }}" >> .env
         shell: bash
 
